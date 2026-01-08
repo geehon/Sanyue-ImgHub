@@ -3,11 +3,6 @@
     <div class="upload-home">
         <!-- 桌面端按钮 -->
         <ToggleDark class="toggle-dark-button desktop-only"/>
-        <el-tooltip content="查看文档" placement="bottom" :disabled="disableTooltip">
-            <a href="https://cfbed.sanyue.de/qa/" target="_blank" class="info-container">
-                <font-awesome-icon icon="book" class="info-icon" size="lg"/>
-            </a>
-        </el-tooltip>
         <el-input class="upload-folder" :class="{ 'active': isFolderInputActive, 'no-announcement': !announcementAvailable }" v-model="uploadFolder" placeholder="上传目录" @focus="isFolderInputActive = true" @blur="isFolderInputActive = false"/>
         <el-tooltip content="切换上传方式" placement="bottom" :disabled="disableTooltip">
             <el-button class="upload-method-button desktop-only" @click="handleChangeUploadMethod">
