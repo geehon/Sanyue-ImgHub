@@ -2,7 +2,7 @@
     <BaseLogin
         :title="loginTitle"
         :fields="loginFields"
-        submit-text="登录"
+        submit-text="APPLY"
         background-key="loginBkImg"
         :is-admin="false"
         :loading="isLoading"
@@ -23,8 +23,8 @@ export default {
             loginFields: [
                 {
                     key: 'password',
-                    label: '密码',
-                    placeholder: '请输入认证码',
+                    label: 'KEY',
+                    placeholder: 'please input key',
                     type: 'password',
                     showPassword: true,
                     icon: 'Lock'
@@ -38,7 +38,7 @@ export default {
             return this.userConfig?.ownerName || 'Sanyue'
         },
         loginTitle() {
-            return `登录到 ${this.ownerName} 图床`
+            return `Login To ${this.ownerName} ImgHub`
         }
     },
     components: {

@@ -26,7 +26,7 @@ export default {
     // 链接打开方式
     target: {
       type: String,
-      default: '_blank', // _blank, _self, _parent, _top
+      default: '_self', // _blank, _self, _parent, _top
       validator: value => ['_blank', '_self', '_parent', '_top'].includes(value)
     },
     // 图片alt文本

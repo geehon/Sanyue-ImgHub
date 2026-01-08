@@ -1,10 +1,6 @@
 <template>
     <div class="login" :class="{ 'is-focused': isFocused }">
-        <ToggleDark class="toggle-dark"/>
-        <Logo />
         <div class="login-container">
-            <h1 class="login-title" tabindex="0">{{ title }}</h1>
-            
             <!-- 动态渲染输入字段 -->
             <div v-for="(field, index) in fields" :key="field.key" class="input-container">
                 <label 
@@ -43,7 +39,6 @@
                 <span v-else>{{ submitText }}</span>
             </el-button>
         </div>
-        <Footer class="footer"/>
     </div>
 </template>
 
@@ -339,7 +334,7 @@ export default {
 
 .submit {
     margin-bottom: 10px;
-    width: 50%;
+    width: 80%;
     height: 48px;
     font-size: 1.1rem;
     font-weight: 600;
